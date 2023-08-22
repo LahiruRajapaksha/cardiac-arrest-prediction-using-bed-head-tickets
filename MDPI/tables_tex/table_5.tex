@@ -1,0 +1,20 @@
+\begin{table}[!t]
+\captionsetup{justification=raggedright,singlelinecheck=false,font={small}}
+\caption{Evaluation metrics of LSTM and Decision Tree models of the Deep Learning Cardiac Arrest Prediction Model}
+\label{table:models}
+    \centering
+    \resizebox{\columnwidth}{!}{%
+    \begin{tabular}{|c|cc|cc|}
+    \hline
+    \multirow{2}{*}{\textbf{Statistic}} & \multicolumn{2}{c|}{\textbf{Value}} & \multicolumn{2}{c|}{\textbf{95\% CI}} \\ \cline{2-5} 
+    & \multicolumn{1}{c|}{LSTM Model} & Decision Tree Model & \multicolumn{1}{c|}{LSTM Model} & Decision Tree Model \\ \hline
+    Sensitivity & \multicolumn{1}{c|}{95.83\%} & 69.57\% & \multicolumn{1}{c|}{95.37\% to 96.25\%} & 47.08\% to 86.79\% \\ \hline
+    Specificity & \multicolumn{1}{c|}{93.42\%} & 81.82\% & \multicolumn{1}{c|}{92.07\% to 94.61\%} & 64.54\% to 93.02\% \\ \hline
+    Positive Predictive Value  & \multicolumn{1}{c|}{98.71\%} & 72.73\% & \multicolumn{1}{c|}{98.44\% to 98.93\%} & 55.19\% to 85.24\% \\ \hline
+    \begin{tabular}[c]{@{}c@{}}Negative Predictive\\ Value\end{tabular} & \multicolumn{1}{c|}{81.04\%} & 79.41\% & \multicolumn{1}{c|}{79.37\% to 
+    82.60\%} & 67.07\% to 87.96\% \\ \hline
+    \end{tabular}%
+    }
+    \label{tbl:table_5}
+    \vspace{-10pt}
+\end{table}
