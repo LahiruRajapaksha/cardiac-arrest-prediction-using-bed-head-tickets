@@ -29,11 +29,11 @@ parser.add_argument('--batch-size', type=int, default=8)
 parser.add_argument('--lstm-nodes', type=int, default=2)
 
 args = parser.parse_args()
-epocs = args.epocs
-learningRate = args.lrate
+epocs = 100
+learningRate = 0.001
 # modelName =args.model_name
-batchSize = args.batch_size
-lstmNodes = args.lstm_nodes
+batchSize = 10
+lstmNodes = 2
 
 
 NO_OF_FEATURES = 20

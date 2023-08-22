@@ -1,0 +1,30 @@
+\begin{table}[!t]
+\caption{Performance comparison with existing machine learning models (LSTM \& Decision Tree are the two models of Deep Learning Cardiac Arrest Prediction Model[DLCAPM])}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+\textbf{Model }           & \textbf{Accuracy} & \textbf{Sensitivity} & \textbf{Specificity} & \textbf{PPV}  & \textbf{NPV}  & \textbf{F-Score} \\ 
+\hline
+\textbf{LSTM} &
+  \begin{tabular}[c]{@{}c@{}}\textbf{0.96}\end{tabular} &
+  \begin{tabular}[c]{@{}c@{}}\textbf{0.95} \end{tabular} &
+  \textbf{0.93} &
+  \textbf{0.98} &
+  \textbf{0.81} &
+  \textbf{0.86} \\ \hline
+\textbf{Decision Tree} &
+  \begin{tabular}[c]{@{}c@{}} \textbf{0.76}\end{tabular} &
+  \begin{tabular}[c]{@{}c@{}} \textbf{0.69}\end{tabular} &
+  \textbf{0.81} &
+  \textbf{0.72} &
+  \textbf{0.79} &
+  \textbf{0.80} \\ \hline
+SVM                 & 0.89     & 0.84        & 0.82        & 0.81 & 0.82 & 0.844   \\ \hline
+Logistic Regression & 0.88     & 0.93        & 0.81        & 0.92 & 0.81 & 0.87    \\ \hline
+Random Forest       & 0.88     & 0.89        & 0.90        & 0.87 & 0.81 & 0.91    \\ \hline
+Naive Bayes         & 0.85     & 0.89        & 0.80        & 0.82 & 0.88 & 0.91    \\ \hline
+\end{tabular}%
+}
+\label{tbl:table_2}
+\vspace{-10pt}
+\end{table}
