@@ -1,0 +1,2 @@
+# adds .vscode folder to ignored files
+.vscode/**/*

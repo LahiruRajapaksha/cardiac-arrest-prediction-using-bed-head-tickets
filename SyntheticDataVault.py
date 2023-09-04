@@ -2,6 +2,7 @@ import pandas as pd
 from sdv.metadata import SingleTableMetadata
 from sdv.sequential import PARSynthesizer
 
+# Importing the patient records
 patient_record = pd.read_csv('/content/sample_data/TrainDead.csv')
 # patient_record = pd.read_csv('/content/sample_data/TrainSurvived.csv')
 
@@ -21,6 +22,6 @@ synthesizer = PARSynthesizer(
 
 synthesizer.fit(patient_record)
 
-#
+# According to the experiments you need to change the number of sequences 
+# to define how many sequences you want to generate
 synthetic_data = synthesizer.sample(num_sequences=74)
-synthetic_data.to_csv("/content/sample_data/FS74.csv")
