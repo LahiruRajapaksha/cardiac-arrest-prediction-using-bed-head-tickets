@@ -14,6 +14,10 @@ To develop a deep learning base for the Early Warning System (EWS) for cardiac p
       1. When we training the model, the model itself is capable of identifying more relationships between the cardiac arrest and the              input parameters. It is expected from the model to create more correlations between the input parameters and the cardiac arrest            so we can infer more causes for the cardiac arrests.
 
   3.  Providing an accurate and reliable system to predict in-ward cardiac arrest
+
+## Demo
+Use the following link to the Google Colab code  <br>
+https://colab.research.google.com/drive/1skQty-cmaVDdYhANI3xjN7pO0SW1Tdrp?usp=sharing
   
  ## Dataset
 Dataset link https://zenodo.org/record/7603772
