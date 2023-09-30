@@ -1,7 +1,7 @@
 # Plot accuracy, validation accuracy loss graphs for models
 
 import matplotlib.pyplot as plt
-from sklearn.externals.six import StringIO
+from six import StringIO
 from sklearn.tree import export_graphviz
 from IPython.display import Image
 import pydotplus
