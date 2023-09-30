@@ -115,17 +115,20 @@ plot_lstm(history)
 plot_decision_tree()
 
 ## Prediction
-lstm_probabilities_prediction_ = model.predict_proba(lstm_patient_training_data)
+lstm_probabilities_prediction_ = model.predict(lstm_patient_training_data)
 lstm_proba_prediction_label = np.reshape(lstm_probabilities_prediction_, (no_of_patients * time_step))
 lstm_true_label = np.reshape(lstm_patient_training_data_label, (no_of_patients * time_step))  
-lstm_class_label_prediction = model.predict_classes(lstm_patient_training_data)
+lstm_class_label_prediction = np.reshape((model.predict(lstm_patient_training_data) > 0.5).astype("int32"), (no_of_patients * time_step))
 
 print("==========LSTM Confusion Matrix==========")
 print(metrics.confusion_matrix(lstm_true_label, lstm_class_label_prediction))
 print(lstm_class_label_prediction)
 lstm_falsePositive, lstm_truPositive, thresholds = roc_curve(lstm_true_label, lstm_proba_prediction_label)
 lstm_precision, lstm_recall, lstm_recall_thresholds = precision_recall_curve(lstm_true_label, lstm_proba_prediction_label)
-lstm_auc_score = roc_auc_score(lstm_true_label, lstm_proba_prediction_label)
+try:
+    lstm_auc_score = roc_auc_score(lstm_true_label, lstm_proba_prediction_label)
+except ValueError:
+    pass
 lstm_f1_score = f1_score(lstm_true_label, lstm_class_label_prediction)
 
 # Decision tree model evaluation (Finaldecision tree model that combines LSTM data)
